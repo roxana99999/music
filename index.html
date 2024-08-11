@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portail Interactif</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="script.js">
+</head>
+<body>
+    <header>
+        <h1>Bienvenue dans notre monde de musique</h1>
+    </header>
+    
+    <nav>
+        <button onclick="showSection('Video')">Video</button>
+        <button onclick="showSection('photo')">Photo</button>
+        <button onclick="showSection('CV')">CV</button>
+        <button onclick="showSection('Formulaire')">Formulaire</button>
+    </nav>
+    
+    <div class="content">
+        <section id="Video" class="section">
+            <h2>La magie de la musique</h2>
+            <video controls width="300">
+                <source src="music.mp4"  type="video/mp4">
+                Votre navigateur ne supporte pas la vidéo.
+            </video>
+        </section>
+
+        <section id="photo" class="section" style="display:none;">
+            <h2>Photo</h2>
+            <img src="music1.jpg" alt="Ma photo" width="50%" height="50%">
+        </section>
+
+        <section id="CV" class="section" style="display:none;">
+            <h2>CV</h2>
+            <img src="music3.jpg" alt="CV" width="50%" height="50%">
+        </section>
+
+        <section id="Formulaire" class="section" style="display:none;">
+            <h2>Contactez-Nous</h2>
+            <form>
+                <label for="nom">Nom:</label><br>
+                <input type="text" id="nom" name="nom" required><br><br>
+
+                <label for="prenom">Prénom:</label><br>
+                <input type="text" id="prenom" name="prenom" required><br><br>
+
+                <label for="date-naissance">Date de Naissance:</label><br>
+                <input type="date" id="date-naissance" name="date-naissance" required><br><br>
+
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="code-postal">Code Postal:</label><br>
+                <input type="text" id="code-postal" name="code-postal" required><br><br>
+
+                <input type="submit" value="Envoyer">
+            </form>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
